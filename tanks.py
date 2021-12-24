@@ -13,7 +13,7 @@ def plot_solution(results):
     plt.show()
 
 
-def f(yt1: float, yt2: float) -> list:
+def f(yt1: float, yt2: float) -> tuple:
     """
     :param yt1: current y value of tank 1
     :param yt2: current y value of tank 2
@@ -26,7 +26,7 @@ def f(yt1: float, yt2: float) -> list:
     return st1, st2
 
 
-def solve_with_forward_euler(f, h: float, x_min: float, x_max: float) -> list:
+def solve_with_forward_euler(f, h: float, x_min: float, x_max: float) -> tuple:
     """
     solves a set of two ODEs using forward euler
 
@@ -53,7 +53,7 @@ def solve_with_forward_euler(f, h: float, x_min: float, x_max: float) -> list:
     return t1, t2
 
 
-def solve_with_heun(f, h: float, x_min: float, x_max: float) -> list:
+def solve_with_heun(f, h: float, x_min: float, x_max: float) -> tuple:
     """
 
     solves a set of two ODEs using heun's method
