@@ -80,7 +80,7 @@ def solve_with_heun(f, h: float, x_min: float, x_max: float) -> tuple:
         t1[i + 1] = t1[i] + (sl + sr) / 2
 
         sl = h * f(t1[i], t2[i])[1]
-        sr = h * f(t1[i] + sl, t2[i])[1]
+        sr = h * f(t1[i], t2[i] + sl)[1]
         t2[i + 1] = t2[i] + (sl + sr) / 2
 
 
